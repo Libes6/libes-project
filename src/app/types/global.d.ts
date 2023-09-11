@@ -1,3 +1,5 @@
+
+
 declare module '*.scss' {
     interface IClassNames {
         [className: string]: string
@@ -5,3 +7,4 @@ declare module '*.scss' {
     const classnames: IClassNames;
     export = classnames;
 }
+
