@@ -13,12 +13,11 @@ const App = () => {
     return (
         <div className={clsMix('app', {}, [theme])}>
             <Suspense fallback={''}>
-                <NavBar/>
+                <NavBar />
                 <div className='content-page'>
-                    <SideBar/>
-                    <AppRouter/>
+                    <SideBar />
+                    <AppRouter />
                 </div>
-
             </Suspense>
         </div>
     )
