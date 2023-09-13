@@ -1,0 +1,15 @@
+.btn{
+  background: transparent;
+  align-items: center;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 100%;
+  align-items: center;
+  padding: 4px ;
+  display: flex;
+  justify-content: center;
+  &:hover{
+    background: var(--text-primary-color);
+  }
+}
+

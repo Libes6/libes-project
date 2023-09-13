@@ -1,18 +1,26 @@
 import React, {FC} from 'react';
-import {Link} from "react-router-dom";
 import {clsMix} from "shared/lib/classNames/clsMix";
 import cls from './NavBar.module.scss'
-import {AppLink} from "shared/ui";
+import {AppLink, Button} from "shared/ui";
+import {LangSwitcher, ThemeSwitcher} from "widgets";
+import {useTranslation} from "react-i18next";
 interface INavBarProps{
 className?:string
 }
 export const NavBar: FC<INavBarProps> = ({className}) => {
+
+    const {t,i18n}=useTranslation()
+
+
+
     return (
         <div className={clsMix(cls.navbar,{},[className])}>
 
             <div className={clsMix(cls.links)}>
-                <AppLink to={'/'}>Главная</AppLink>
-                <AppLink to={'/about'}>О сайте</AppLink>
+                <AppLink to={'/'}>{t('MainTitle')}</AppLink>
+                <AppLink to={'/about'}>{t('AboutTitle')}</AppLink>
+                <ThemeSwitcher/>
+                <LangSwitcher/>
             </div>
 
         </div>

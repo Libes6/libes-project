@@ -1,1 +1,1 @@
-export * from  './public/AppLink'
+export * from  './AppLink'
