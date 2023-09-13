@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 
 export  const  useSideBar =()=>{
     const [collapsed, setCollapsed] = useState<boolean>(false)
@@ -6,5 +6,5 @@ export  const  useSideBar =()=>{
     const onCollapsed =()=>{
         setCollapsed(prevState => !prevState)
     }
-    return {collapsed,onCollapsed}
+    return { collapsed,onCollapsed }
 }

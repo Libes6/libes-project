@@ -8,8 +8,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // for passing in lng and translations on init
 
 i18n
-      .use(Backend)
- .use(LanguageDetector)
+    .use(Backend)
+    .use(LanguageDetector)
     .use(initReactI18next)
     .init({
         fallbackLng: 'ru',
@@ -18,7 +18,7 @@ i18n
             escapeValue: false,
         },
         backend:{
-          loadPath:'/locales/{{lng}}/{{ns}}.json'
+            loadPath:'/locales/{{lng}}/{{ns}}.json'
         }
     });
 

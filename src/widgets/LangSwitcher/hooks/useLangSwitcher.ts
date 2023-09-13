@@ -1,10 +1,10 @@
-import {useTranslation} from "react-i18next";
-import {ILangSwitcher, ILangSwitcherList} from "../type/ILangSwitcher";
+import { useTranslation } from "react-i18next";
+import { ILangSwitcher, ILangSwitcherList } from "../type/ILangSwitcher";
 
 export const  useLangSwitcher = ()=>{
 
-    const {t,i18n}=useTranslation()
-const langList:ILangSwitcherList[]=[{lang:'en'},{lang:"ru"}]
+    const { i18n }=useTranslation()
+    const langList:ILangSwitcherList[]=[{ lang:'en' },{ lang:"ru" }]
     const onToggleTranslate =(lang:typeof ILangSwitcher[number]|string)=>{
         console.log(lang)
         i18n.changeLanguage(lang)
@@ -13,5 +13,5 @@ const langList:ILangSwitcherList[]=[{lang:'en'},{lang:"ru"}]
 
     const selectLanguages =i18n.language
 
-    return {langList,selectLanguages,onToggleTranslate}
+    return { langList,selectLanguages,onToggleTranslate }
 }

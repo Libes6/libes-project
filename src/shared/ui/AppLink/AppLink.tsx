@@ -1,8 +1,8 @@
 
-import {FC} from "react";
-import {clsMix} from "shared/lib/classNames/clsMix";
+import { FC } from "react";
+import { clsMix } from "shared/lib/classNames/clsMix";
 import cls from './AppLink.module.scss'
-import {Link, LinkProps} from "react-router-dom";
+import { Link, LinkProps } from "react-router-dom";
 
 
 export enum AppLinkTheme{
@@ -21,9 +21,9 @@ export const AppLink:FC<IAppLinkProps> = (props) => {
         theme=AppLinkTheme.PRIMARY,
         ...otherProps
     }=props
- return (
-  <Link to={to} className={clsMix(cls.link,{},[className,cls[theme]])} {...otherProps}>
-      {children}
-  </Link>
- );
+    return (
+        <Link to={to} className={clsMix(cls.link,{},[className,cls[theme]])} {...otherProps}>
+            {children}
+        </Link>
+    );
 };
