@@ -1,9 +1,11 @@
 import React from 'react';
+import { t } from 'i18next';
 
 const MainPage = () => {
     return (
         <div>
-            MainPage
+            {t('MainTitle')}
+            <input type='text'></input>
         </div>
     );
 };
