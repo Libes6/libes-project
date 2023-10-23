@@ -12,6 +12,15 @@
 
 .content-page{
     display: flex;
+    height: 100%;
+
+    &__main{
+        flex-grow: 1;
+
+
+    }
 }
+
+
 
 

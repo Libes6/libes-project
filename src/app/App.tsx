@@ -1,14 +1,14 @@
-import React, { Suspense } from 'react'
-import './styles/index.scss'
-import { useTheme } from 'app/providers/ThemeProvider'
+import React, { Suspense } from 'react';
+import './styles/index.scss';
+import { useTheme } from 'app/providers/ThemeProvider';
 
-import { clsMix } from 'shared/lib/classNames/clsMix'
-import AppRouter from 'app/providers/router/ui/AppRouter'
-import { NavBar } from 'widgets/NavBar'
-import { SideBar } from 'widgets'
+import { clsMix } from 'shared/lib/classNames/clsMix';
+import AppRouter from 'app/providers/router/ui/AppRouter';
+import { NavBar } from 'widgets/NavBar';
+import { SideBar } from 'widgets';
 
 const App = () => {
-    const { theme } = useTheme()
+    const { theme } = useTheme();
 
     return (
         <div className={clsMix('app', {}, [theme])}>
@@ -16,11 +16,13 @@ const App = () => {
                 <NavBar />
                 <div className='content-page'>
                     <SideBar />
-                    <AppRouter />
+                    <div className='content-page__main'>
+                        <AppRouter />
+                    </div>
                 </div>
             </Suspense>
         </div>
-    )
-}
+    );
+};
 
-export default App
+export default App;
